@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Description: A two-column, fixed-width design with dark color scheme.
+The basic structure of this webpage is inspired from one of the w3 web templates released under the Creative Commons License.
+This is a highly simplified design with one page.
+Purpose - To display live Cryptocurrency prices and Stock Market prices
+@ashleyvj999@gmail.com
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" /><!-- Links to the CSS file, default.css -->
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">CryptoTrack</a></h1>
+		</div>
+		<div id="menu"> <!-- Menu -->
+			<ul>
+				<li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
+				<li><a href="#" accesskey="2" title="">Login</a></li>
+			</ul>
+		</div> <!-- end of Menu -->
+	</div>
+	</div>
+	<div id="banner">
+		<div class="container">
+			<div class="title"> <!-- Title to welcome the visitor and brief introduction -->
+				<h2>Welcome to CryptoTrack</h2> 
+				<span class="byline">We help you get updated with latest data of popular cryptocurrencies and live market index </span> </div>
+			<ul class="actions">
+				<li><a href="#" class="button">Sign Up</a></li> <!-- Sign Up service not provided at the moment. Working on it!!! -->
+			</ul>
+		</div>
+	</div>
+	<div id="extra" class="container">
+		<div class="title">
+			<h2>We provide Stock Market Tracker</h2>
+			<span class="byline">We provide you with real-time and precise data of BSE,NSE,CBOE and CME_MINI</span> </div>
+		</div>
+
+	</div>
+	<div id="featured">
+		<div class="container">
+			<div class="title">
+				<h2>Live Bitcoin prices</h2> <!-- Tracks five CryptoCurrency -->
+				<span class="byline">The CryptoTrack Bitcoin widget displays the most recent data</span> </div>
+				<div class="btcwdgt-chart"> <!-- This section of code uses javascript to invoke the cryptonator widget -->
+					<script type="text/javascript"> 
+						crypt_multi_num_cur = "5";
+						crypt_base_cur_0 = "Bitcoin (BTC)";crypt_target_cur_0 = "US Dollar (USD)";
+						crypt_base_cur_1 = "Ethereum (ETH)";crypt_target_cur_1 = "US Dollar (USD)";
+						crypt_base_cur_2 = "Ripple (XRP)";crypt_target_cur_2 = "US Dollar (USD)";
+						crypt_base_cur_3 = "Zcash (ZEC)";crypt_target_cur_3 = "US Dollar (USD)";
+						crypt_base_cur_4 = "Litecoin (LTC)";crypt_target_cur_4 = "007 (007)";
+						crypt_multi_background_color = "#D3D3D3";
+						crypt_multi_transperency = false;
+						crypt_multi_font_family = "Times New Roman";
+						</script>
+						<script type="text/javascript" src="https://www.cryptonator.com/ui/js/widget/multi_widget.js">
+						</script>
+				</div>
+		</div>
+	
+	</div>
+	<div id="page" class="container">
+		<div class="title"> <!-- Stock tracker tracks 4 prominent indexes -->
+			<h2>Stock Market Tracker</h2> <!-- This section of code uses javascript to invoke the trading view widget -->
+			<span class="byline">The Stock Market Tracker displays live data of BSE,NSE,CBOE and CME_MINI</span> </div>
+			<div class="stock_widget">
+				<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js">
+					{
+						"showChart": true,
+						"locale": "in",
+						"width": "600",
+						"height": "660",
+					    "tabs": [
+						{
+						  "title": "Indices",
+						  "symbols": [
+							{
+							  "s": "BSE:BSE500"
+							},
+							{
+							  "s": "NSE:NIFTY"
+							},
+							{
+							  "s": "CBOE:UZF"
+							},
+							{
+							  "s": "CME_MINI:UU1!"
+							}
+						  ]
+						}
+					  ]
+					}
+					</script>
+			</div>
+	</div>
+</div>
+</body>
+</html>
